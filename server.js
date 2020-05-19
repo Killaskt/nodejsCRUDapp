@@ -23,7 +23,8 @@ mongoose.connect(db, { useUnifiedTopology: true, useNewUrlParser: true })
 // use routes 
 app.use('/api/items', items)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
+// had to change from 3000 since reactstrap inherently runs from 3000
 
 app.listen(port, () => console.log(`shits listening on port ${port}`));
 
