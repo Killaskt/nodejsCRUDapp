@@ -12,7 +12,6 @@ import {
  } from "reactstrap";
  import {connect} from 'react-redux';
  import {addItem} from '../actions/itemActions' 
- import { v4 as uuid } from "uuid";
 
  // container: a component that is hooked to redux, using a redux state inside a react component
 
@@ -36,7 +35,6 @@ class ItemModal extends Component {
         e.preventDefault();
 
         const newItem = {
-            id: uuid(),
             name: this.state.name
         }
 
