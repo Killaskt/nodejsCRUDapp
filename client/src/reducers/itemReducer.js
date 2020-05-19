@@ -28,7 +28,18 @@ export default function(state = intialState, action) {
         case GET_ITEMS:
             return {
                 ...state // ... is the spread operator
-            }
+            };
+        case DELETE_ITEM:
+            return {
+                ...state,
+                items: state.items.filter(item => item.id !== action.payload)
+            };
+        case ADD_ITEM:
+            return {
+                ...state,
+                items: [action.payload, ...state.items] //we use the ... (spread operator) because we cant directly mutate the 'items', so this makes a copy of it
+
+            };
         default:
             return state;
     }
