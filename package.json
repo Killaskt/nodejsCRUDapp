@@ -4,8 +4,12 @@
   "description": "Shopping list made with MERN stack, items will be checked on amazon and then suggested",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientAlternative": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Shubham Tiwari",
   "license": "ISC",
