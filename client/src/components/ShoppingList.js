@@ -33,7 +33,7 @@ class ShoppingList extends Component {
                             }))
                         }
                     }}
-                >Add Item</Button> */}
+                >Add Item</Button> handled by add item modal*/}
 
                 <ListGroup>
                     <TransitionGroup className="shopping-list">

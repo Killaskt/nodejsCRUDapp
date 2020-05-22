@@ -1,6 +1,6 @@
 // this file makes requests to the backend
 import axios from 'axios' //http client
-import {GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING} from './types'
+import {GET_ITEMS, GET_AMAZON_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING} from './types'
 
 export const getItems = () => dispatch => {
     dispatch(setItemsLoading());
@@ -32,6 +32,18 @@ export const deleteItem = (id) => dispatch => {
         payload: id
     })
     );
+};
+
+export const getAMZNItems = () => dispatch => {
+    dispatch(setItemsLoading());
+    axios.get('/api/scrape') //we can simply do this because of the proxy set in the local package.json
+        .then(res =>
+            // dispatch({
+            //     type: GET_AMAZON_ITEMS,
+            //     payload: res.data
+            // })
+            console.log(res.data)
+         )
 };
 
 

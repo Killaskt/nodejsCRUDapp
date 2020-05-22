@@ -56,11 +56,6 @@ async function scrapeAMZN(url) {
   };
 
   router.get('/', (req, res) => {
-    // res.writeHead(200, {'Content-Type': 'application/json'});
-    // async function yellah(err, urls) {
-    //   if (err) throw err; 
-    //   await scrapeAMZN(urls); 
-    // };
     res.header("Content-Type",'application/json');
     scrapeAMZN(urls).then((x) => res.json(x)).catch(e => console.log(e))
     return;
