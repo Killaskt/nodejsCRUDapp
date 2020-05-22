@@ -5,7 +5,9 @@ const express = require('express');
 // const bp = require('body-parser');
 
 // handles all http routes (post, get, ...)
-const items = require('./routes/api/items')
+const items = require('./routes/api/items');
+// scraper
+const scrape = require('./routes/api/amznScrape');
 
 const app = express();
 
@@ -25,6 +27,8 @@ app.use('/api/items', items)
 
 const port = process.env.PORT || 5000;
 // had to change from 3000 since reactstrap inherently runs from 3000
+
+app.use('/api/scrape', scrape)
 
 app.listen(port, () => console.log(`shits listening on port ${port}`));
 

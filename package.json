@@ -18,7 +18,8 @@
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
-    "mongoose": "^5.9.14"
+    "mongoose": "^5.9.14",
+    "puppeteer": "^3.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
